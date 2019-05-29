@@ -2,7 +2,7 @@
 
 > Generic form validation hook for React.
 
-[![NPM](https://img.shields.io/npm/v/@jmfirth/react-use-validation.svg)](https://www.npmjs.com/package/@jmfirth/react-use-validation)
+[![NPM](https://img.shields.io/npm/v/@jmfirth/react-use-form-validation.svg)](https://www.npmjs.com/package/@jmfirth/react-use-form-validation)
 
 ## Install
 
