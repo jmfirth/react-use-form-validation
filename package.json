@@ -1,10 +1,10 @@
 {
-  "name": "react-use-validation",
+  "name": "react-use-form-validation",
   "version": "1.0.0",
-  "description": "Generic validation hook for React.",
+  "description": "Generic form validation hook for React.",
   "author": "jmfirth",
   "license": "MIT",
-  "repository": "jmfirth/react-use-validation",
+  "repository": "jmfirth/react-use-form-validation",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
@@ -19,26 +19,34 @@
     "start": "rollup -c -w",
     "prepare": "yarn run build",
     "predeploy": "cd example && yarn install && yarn run build",
-    "deploy": "gh-pages -d example/build"
+    "deploy": "gh-pages -d example/build",
+    "ts:format": "prettier --write src/**/*.ts src/**/*.tsx",
+    "ts:lint": "tslint --project ./",
+    "lint": "concurrently -n \"ts:lint\" -c \"red\" \"yarn run ts:lint\"",
+    "format": "concurrently -n \"ts:format\" -c \"red\" \"yarn run ts:format\""
   },
   "dependencies": {},
   "peerDependencies": {
-    "prop-types": "^15.5.4",
     "react": "^15.0.0 || ^16.0.0",
     "react-dom": "^15.0.0 || ^16.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/runtime": "^7.4.2",
+    "@geekhive/tslint-config-standard": "^1.0.0",
     "@svgr/rollup": "^2.4.1",
     "@types/jest": "^23.1.5",
     "@types/react": "^16.3.13",
     "@types/react-dom": "^16.0.5",
-    "babel-core": "^6.26.3",
-    "babel-runtime": "^6.26.0",
+    "concurrently": "^4.1.0",
     "cross-env": "^5.1.4",
     "gh-pages": "^1.2.0",
+    "husky": "^1.3.1",
+    "prettier": "^1.16.4",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts-ts": "^2.16.0",
+    "react-testing-library": "^6.0.3",
     "rollup": "^0.62.0",
     "rollup-plugin-babel": "^3.0.7",
     "rollup-plugin-commonjs": "^9.1.3",
@@ -47,9 +55,15 @@
     "rollup-plugin-postcss": "^1.6.2",
     "rollup-plugin-typescript2": "^0.17.0",
     "rollup-plugin-url": "^1.4.0",
-    "typescript": "^2.8.3"
+    "tslint": "^5.11.0",
+    "typescript": ">=2.1.0 || >=2.1.0-dev || >=2.2.0-dev || >=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev || >=2.8.0-dev || >=2.9.0-dev || >=3.0.0-dev || >= 3.1.0-dev || >= 3.2.0-dev"
   },
   "files": [
     "dist"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run format && yarn run lint"
+    }
+  }
 }
