@@ -1,0 +1,12 @@
+.vscode
+node_modules
+example
+src
+.editorconfig
+.gitignore
+.travis.yml
+prettier.config.js
+rollup.config.js
+tsconfig.json
+tsconfig.test.json
+tslint.json

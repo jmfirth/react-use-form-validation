@@ -1,13 +1,13 @@
-# react-use-form-validation
+# @jmfirth/react-use-form-validation
 
-> Generic validation hook for React.
+> Generic form validation hook for React.
 
-[![NPM](https://img.shields.io/npm/v/react-use-validation.svg)](https://www.npmjs.com/package/react-use-validation)
+[![NPM](https://img.shields.io/npm/v/@jmfirth/react-use-validation.svg)](https://www.npmjs.com/package/@jmfirth/react-use-validation)
 
 ## Install
 
 ```bash
-npm install --save react-use-form-validation
+npm install --save @jmfirth/react-use-form-validation
 ```
 
 ## Usage
@@ -20,21 +20,15 @@ Install dependencies:
 
 ```sh
 $ yarn install
-$ cd example && yarn install
+$ cd example && yarn install && cd ..
 ```
 
-Start the library watcher:
+Run the development environment:
 
 ```sh
 $ yarn start
 ```
 
-Start the example development web server:
-
-```sh
-$ cd example && yarn start
-```
-
 ## License
 
-MIT © [jmfirth](https://github.com/jmfirth)
+MIT © [Justin Firth](https://github.com/jmfirth)
