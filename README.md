@@ -12,17 +12,7 @@ npm install --save react-use-form-validation
 
 ## Usage
 
-```tsx
-import * as React from 'react';
-
-import MyComponent from 'react-use-form-validation';
-
-class Example extends React.Component {
-  render() {
-    return <MyComponent />;
-  }
-}
-```
+See the [demo LoginForm](example/src/LoginForm.tsx) for a usage example.
 
 ## Development
 
@@ -30,7 +20,7 @@ Install dependencies:
 
 ```sh
 $ yarn install
-$ cd example && yearn install
+$ cd example && yarn install
 ```
 
 Start the library watcher:
