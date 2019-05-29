@@ -1,4 +1,4 @@
-# react-use-validation
+# react-use-form-validation
 
 > Generic validation hook for React.
 
@@ -15,7 +15,7 @@ npm install --save react-use-form-validation
 ```tsx
 import * as React from 'react';
 
-import MyComponent from 'react-use-validation';
+import MyComponent from 'react-use-form-validation';
 
 class Example extends React.Component {
   render() {
